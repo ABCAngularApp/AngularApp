@@ -71,7 +71,7 @@ export class EmployeeComponent implements OnInit {
         this.currentEmployee = this.employee[i];
       }
     }
-    tr.style.backgroundColor = 'green';
+    tr.style.backgroundColor = '#b7d67e';
     this.Row = tr;
     this.counter++;
   }

@@ -37,7 +37,7 @@ export class ProjectsComponent implements OnInit {
         this.currentProject = this.projects[i];
       }
     }
-    tr.style.backgroundColor = 'green';
+    tr.style.backgroundColor = '#b7d67e';
     this.Row = tr;
     this.counter++;
   }
