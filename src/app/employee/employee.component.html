@@ -19,6 +19,7 @@
 
 <div *ngIf='firstTab' class="container employee-main">
   <h2>Basic info</h2><br>
+  <!-- Current User -->
 <div *ngIf='!createUser && !updateUser'>
   <div class="row">
     <div>
@@ -53,6 +54,7 @@
   </div>
 </div>
 
+<!-- create user -->
 <div *ngIf='createUser'>
   <div class="row">
     <div>
@@ -86,6 +88,7 @@
   </div>
 </div>
 
+<!-- update user -->
 <div *ngIf='updateUser' class=" employee-main">
   <div class="row">
     <div>
