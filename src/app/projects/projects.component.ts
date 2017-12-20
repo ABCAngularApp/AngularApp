@@ -50,7 +50,7 @@ export class ProjectsComponent implements OnInit {
     for (let i = 0; i < length; i++) {
       let a = new Date(this.projects[i].endDate);
       if(a<currentDate){
-        this.projects[i].status = "INACTIVE"
+        this.projects[i].status = "NOT_ACTIVE"
       }
     }
   }
