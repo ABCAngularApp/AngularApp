@@ -1,0 +1,24 @@
+input{
+position: absolute;
+left: 300px;
+width: 210px;
+}
+
+.employee-main{
+    margin-top: 50px;
+}
+
+.create{
+    position: relative;
+    bottom: 34px;
+    left: 84px;
+    padding-left: 10px;
+}
+
+.tab{
+    width: 149px;
+}
+
+button{
+    width: 80px;
+}
