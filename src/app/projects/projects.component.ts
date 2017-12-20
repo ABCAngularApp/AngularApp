@@ -16,5 +16,31 @@ export class ProjectsComponent implements OnInit {
   }
 
   projects = this._projects.getProject();
+  currentProject = this.projects[0];
+  showDetails:boolean = false;
+  hideDetails:boolean = false;
+
+
+  checkCurrentProject(val) {
+    let length = this.projects.length;
+    for (let i = 0; i < length; i++) {
+      this.projects[i].isSelected = false;
+      if (this.projects[i].id == val.innerHTML) {
+        this.projects[i].isSelected = true;
+        this.currentProject = this.projects[i];
+      }
+    }
+    //tr.style.backgroundColor='yellow';
+  }
+
+  projectDetails(){
+    this.showDetails = true;
+    this.hideDetails = true;
+  }
+
+  hideProject(){
+    this.hideDetails = false;
+    this.showDetails = false;
+  }
 
 }

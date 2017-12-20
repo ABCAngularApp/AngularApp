@@ -21,7 +21,7 @@ import { ProjectsComponent } from './projects/projects.component';
     RouterModule.forRoot([
       {path: 'employee', component: EmployeeComponent },
       {path: 'projects', component: ProjectsComponent },
-      {path: '**', component: ProjectsComponent}
+      {path: '**', component: EmployeeComponent}
     ])
   ],
   providers: [],

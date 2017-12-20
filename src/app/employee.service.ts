@@ -65,14 +65,16 @@ export class EmployeeService {
      "name":"Project 1",
      "startDate":"2017-10-31T22:00:00Z",
      "endDate":"2017-11-29T22:00:00Z",
-     "status":"ACTIVE"
+     "status":"ACTIVE",
+     "isSelected": true
   },
   {  
      "id":2,
      "name":"Project 2",
      "startDate":"2017-10-31T22:00:00Z",
      "endDate":"2017-11-29T22:00:00Z",
-     "status":"ACTIVE"
+     "status":"ACTIVE",
+     "isSelected": false
   }
 ];
 
