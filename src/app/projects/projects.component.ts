@@ -10,7 +10,9 @@ import { EmployeeService } from '../employee.service';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor(private _projects: EmployeeService) { }
+  constructor(private _projects: EmployeeService) { 
+    this.checkStatus();
+  }
 
   ngOnInit() {
   }
@@ -30,7 +32,6 @@ export class ProjectsComponent implements OnInit {
         this.currentProject = this.projects[i];
       }
     }
-    //tr.style.backgroundColor='yellow';
   }
 
   projectDetails(){
@@ -42,5 +43,18 @@ export class ProjectsComponent implements OnInit {
     this.hideDetails = false;
     this.showDetails = false;
   }
+
+  checkStatus(){
+    let length = this.projects.length;
+    var currentDate = new Date();
+    for (let i = 0; i < length; i++) {
+      let a = new Date(this.projects[i].endDate);
+      if(a<currentDate){
+        this.projects[i].status = "INACTIVE"
+      }
+    }
+  }
+
+
 
 }

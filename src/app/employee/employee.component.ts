@@ -59,7 +59,7 @@ export class EmployeeComponent implements OnInit {
     this.firstTab = true;
   }
 
-  checkCurrentEmployee(val,tr) {
+  checkCurrentEmployee(val) {
     let length = this.employee.length;
     for (let i = 0; i < length; i++) {
       this.employee[i].isSelected = false;
@@ -68,7 +68,6 @@ export class EmployeeComponent implements OnInit {
         this.currentEmployee = this.employee[i];
       }
     }
-    //tr.style.backgroundColor='yellow';
   }
 
   create() {

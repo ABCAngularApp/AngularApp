@@ -8,7 +8,7 @@
         <th class="text-center">First Name</th>
         <th class="text-center">Last Name</th>
       </tr>
-      <tr #selectRow *ngFor='let employeeID of employee' (click)='checkCurrentEmployee(currentID,selectRow)'>
+      <tr *ngFor='let employeeID of employee' (click)='checkCurrentEmployee(currentID)'>
         <td #currentID>{{employeeID.id}}</td>
         <td>{{employeeID.firstName}}</td>
         <td>{{employeeID.lastName}}</td>
