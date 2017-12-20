@@ -19,7 +19,8 @@ export class EmployeeComponent implements OnInit {
   createUser: boolean = false;
   updateUser: boolean = false;
   firstTab:boolean = true;
-
+  Row;
+  counter:number = 0;
 
 
   constructor(private _employee: EmployeeService) { }
@@ -59,7 +60,10 @@ export class EmployeeComponent implements OnInit {
     this.firstTab = true;
   }
 
-  checkCurrentEmployee(val) {
+  checkCurrentEmployee(val,tr) {
+    if(this.counter>0){
+    this.Row.style.backgroundColor = 'white';      
+    }
     let length = this.employee.length;
     for (let i = 0; i < length; i++) {
       this.employee[i].isSelected = false;
@@ -68,6 +72,9 @@ export class EmployeeComponent implements OnInit {
         this.currentEmployee = this.employee[i];
       }
     }
+    tr.style.backgroundColor = 'green';
+    this.Row = tr;
+    this.counter++;
   }
 
   create() {

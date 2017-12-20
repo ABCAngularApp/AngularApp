@@ -6,11 +6,11 @@
 <div class="container projects-main">
   <h2>All projects</h2><br>
   <table class="table table-hover text-center table-bordered">
-    <tr>
+    <tr class="first-row">
       <th class="text-center">Id</th>
       <th class="text-center">Project Name</th>
     </tr>
-    <tr *ngFor='let project of projects' (click)='checkCurrentProject(currentID)'>
+    <tr #selectedRow *ngFor='let project of projects' (click)='checkCurrentProject(currentID,selectedRow)'>
       <td #currentID>{{project.id}}</td>
       <td>{{project.name}}</td>
     </tr>

@@ -21,9 +21,14 @@ export class ProjectsComponent implements OnInit {
   currentProject = this.projects[0];
   showDetails:boolean = false;
   hideDetails:boolean = false;
+  counter:number = 0;
+  Row;
 
 
-  checkCurrentProject(val) {
+  checkCurrentProject(val,tr) {
+    if(this.counter>0){
+      this.Row.style.backgroundColor = 'white';      
+      }
     let length = this.projects.length;
     for (let i = 0; i < length; i++) {
       this.projects[i].isSelected = false;
@@ -32,6 +37,9 @@ export class ProjectsComponent implements OnInit {
         this.currentProject = this.projects[i];
       }
     }
+    tr.style.backgroundColor = 'green';
+    this.Row = tr;
+    this.counter++;
   }
 
   projectDetails(){
